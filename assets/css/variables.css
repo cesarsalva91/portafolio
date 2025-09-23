@@ -1,0 +1,18 @@
+:root{
+  /* Colores */
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --text: #e0e0e0;
+  --muted: #aaa;
+  --primary: #2979FF;
+  --primary-600: #1565C0;
+  --code-ink: rgba(41,121,255,.25);
+
+  /* Dimensiones */
+  --container: 1000px;
+  --header-h: 64px;         /* altura aproximada del header sticky */
+  --space: 2rem;
+
+  /* Duraciones */
+  --fade: 2s;
+}

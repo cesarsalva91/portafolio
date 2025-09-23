@@ -1,0 +1,12 @@
+/* Reset / base */
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+a{ color: inherit; }
+.container{ max-width: var(--container); margin: 0 auto; padding: 0 var(--space); }
+.hidden{ display: none !important; }

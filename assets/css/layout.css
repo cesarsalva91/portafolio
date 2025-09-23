@@ -1,0 +1,37 @@
+/* Header / Navbar */
+header{
+  position: sticky; top: 0; z-index: 100;
+  background: var(--surface); padding: 1rem var(--space);
+}
+nav{ display:flex; justify-content:space-between; align-items:center; }
+nav h1{ color: var(--primary); font-size: 1.6rem; }
+nav ul{ list-style:none; display:flex; gap: 1.5rem; }
+nav ul a{ text-decoration:none; color: var(--text); transition: color .3s; }
+nav ul a:hover{ color: var(--primary); }
+
+/* Secciones y títulos */
+section{ padding: 4rem var(--space); max-width: var(--container); margin: 0 auto; }
+#about, #projects, #skills, #contact{ /* offset al hacer click desde navbar */
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+h2{ color: var(--primary); margin-bottom: 1.5rem; }
+
+/* Hero */
+#hero{
+  height: 90vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+}
+#hero h2{ font-size: 2.5rem; color: var(--primary); }
+#hero p{ margin: 1rem 0; }
+.btn{
+  display:inline-block;
+  background: var(--primary); color:#0f172a;
+  padding:.7rem 1.5rem; border-radius: 30px; font-weight: 700; text-decoration: none;
+  transition: .3s;
+}
+.btn:hover{ background: var(--primary-600); box-shadow:0 0 12px var(--primary); }
+
+/* Footer */
+footer{
+  text-align:center; background: var(--surface); padding: 1.5rem; margin-top: 2rem; color: var(--muted);
+}

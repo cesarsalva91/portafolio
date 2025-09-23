@@ -1,0 +1,25 @@
+/* Intro overlay + typewriter */
+#intro{
+  position: fixed; inset: 0; z-index: 9999;
+  display:flex; justify-content:center; align-items:center;
+  background:#0d0d0d; opacity: 1; transition: opacity var(--fade) ease;
+}
+.type-row{
+  font-size: clamp(32px, 9vw, 120px);
+  color:#f8f9fa; text-shadow:0 0 12px rgba(59,130,246,.4);
+}
+.prompt{ color: var(--primary); }
+.cursor{ color: var(--primary); animation: blink 1s steps(1,end) infinite; }
+@keyframes blink{ 0%,49%{opacity:1;} 50%,100%{opacity:0;} }
+
+.fade-out{ opacity: 0; }
+
+/* Portafolio: oculto al inicio, animable */
+#portfolio{
+  opacity: 0; visibility: hidden; transition: opacity var(--fade) ease; padding: var(--space);
+}
+#portfolio.fade-in{ opacity:1 !important; visibility: visible !important; }
+
+/* Scroll reveal */
+.reveal{ opacity:0; transform: translateY(40px); transition: all .8s ease-out; }
+.reveal.active{ opacity:1; transform: translateY(0); }
