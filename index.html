@@ -3,18 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portafolio de Cesar</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,
+  %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E
+    %3Crect width='64' height='64' rx='14' fill='%230d1117'/%3E
+    %3Cpath fill='%2358a6ff' d='M23.2 19.2a2.5 2.5 0 0 1 3.5 3.5L17.4 32l9.3 9.3a2.5 2.5 0 1 1-3.5 3.5L12 33.5a2.5 2.5 0 0 1 0-3.5L23.2 19.2zM40.8 19.2a2.5 2.5 0 0 1 3.5 0L56 30a2.5 2.5 0 0 1 0 3.5L44.3 44.8a2.5 2.5 0 1 1-3.5-3.5L50.6 32l-9.8-9.3a2.5 2.5 0 0 1 0-3.5z'/%3E
+  %3C/svg%3E" type="image/svg+xml" />
 
-  <!-- CSS (orden: variables -> base -> layout -> components -> effects) -->
+  <title>Cesar-Dev</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/variables.css?v=1" />
   <link rel="stylesheet" href="assets/css/base.css?v=1" />
   <link rel="stylesheet" href="assets/css/layout.css?v=1" />
-  <link rel="stylesheet" href="assets/css/components.css?v=1" />
+  <link rel="stylesheet" href="assets/css/components.css?v=5" />
   <link rel="stylesheet" href="assets/css/effects.css?v=1" />
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- SEO -->
+  <meta name="description" content="Portafolio de César Fabián Salva, desarrollador backend y especialista en automatización con Java, Python y Docker.">
+  <meta name="keywords" content="Cesar Salva, desarrollador backend, automatización, Docker, Java, Python, Flask, Spring Boot, MySQL, Mikrotik API, redes">
 </head>
+
 <body>
   <!-- Intro -->
   <div id="intro">
@@ -25,13 +38,17 @@
 
   <!-- Portafolio -->
   <div id="portfolio">
-    <!-- Fondo animado de código -->
     <div id="code-background"></div>
 
     <!-- Header -->
     <header>
       <nav>
-        <h1>Mi Portafolio</h1>
+        <a href="#hero" class="logo-icon" aria-label="Volver al inicio">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <rect width="64" height="64" rx="14" fill="#0d1117"/>
+            <path fill="#58a6ff" d="M23.2 19.2a2.5 2.5 0 0 1 3.5 3.5L17.4 32l9.3 9.3a2.5 2.5 0 1 1-3.5 3.5L12 33.5a2.5 2.5 0 0 1 0-3.5L23.2 19.2zM40.8 19.2a2.5 2.5 0 0 1 3.5 0L56 30a2.5 2.5 0 0 1 0 3.5L44.3 44.8a2.5 2.5 0 1 1-3.5-3.5L50.6 32l-9.8-9.3a2.5 2.5 0 0 1 0-3.5z"/>
+          </svg>
+        </a>
         <ul>
           <li><a href="#about">Sobre mí</a></li>
           <li><a href="#projects">Proyectos</a></li>
@@ -43,21 +60,28 @@
 
     <!-- Hero -->
     <section id="hero">
-      <h2>Hola, soy Cesar</h2>
+      <h2>Hola, soy César</h2>
+
       <div class="sphere" id="sphere">
         <div class="eye left"></div>
         <div class="eye right"></div>
       </div>
-      <p>Desarrollador Web | Backend & Frontend</p>
-      <a href="#projects" class="btn">Ver mis proyectos</a>
+
+      <p>Desarrollador Backend & Automatización | Java • Python • Docker • MySQL</p>
+
+      <div class="scroll-indicator" onclick="document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });">
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </section>
 
     <!-- Sobre mí -->
     <section id="about" class="reveal">
       <h2>Sobre mí</h2>
       <p>
-        Soy un apasionado por el desarrollo web, con experiencia en frontend y backend.
-        Me gusta crear soluciones simples, elegantes y funcionales para problemas complejos.
+        Soy un profesional con experiencia en administración de redes y un enfoque creciente en desarrollo de software. 
+        Me apasiona la automatización de procesos, la integración de APIs y la creación de soluciones escalables 
+        utilizando tecnologías como Java, Python, Docker y MySQL. 
+        Disfruto aprender continuamente y aplicar mis conocimientos para optimizar entornos tecnológicos.
       </p>
     </section>
 
@@ -65,9 +89,20 @@
     <section id="projects" class="reveal">
       <h2>Proyectos</h2>
       <div class="project-list">
-        <article class="project"><h3>Proyecto 1</h3><p>Descripción corta.</p></article>
-        <article class="project"><h3>Proyecto 2</h3><p>Descripción corta.</p></article>
-        <article class="project"><h3>Proyecto 3</h3><p>Descripción corta.</p></article>
+        <a class="project" href="https://github.com/cesarsalva91/mikrosys" target="_blank" rel="noopener">
+          <h3>Mikrosys</h3>
+          <p>Sistema integral con frontend y backend en Python para configuración, monitoreo y gestión de routers MikroTik mediante su API. Incluye interfaz gráfica y persistencia en JSON.</p>
+        </a>
+
+        <a class="project" href="https://github.com/cesarsalva91/Speed_Control_NAT_Tracker" target="_blank" rel="noopener">
+          <h3>Speed Control NAT Tracker</h3>
+          <p>Aplicación Python para monitoreo en tiempo real del tráfico NAT en routers. Muestra estadísticas de consumo y genera registros CSV automáticos.</p>
+        </a>
+
+        <a class="project" href="https://github.com/cesarsalva91/BK-ZTE" target="_blank" rel="noopener">
+          <h3>BK-ZTE</h3>
+          <p>Sistema modular en Python para realizar copias de seguridad automáticas de configuraciones en equipos ZTE mediante conexión SSH. Implementa almacenamiento JSON y arquitectura escalable.</p>
+        </a>
       </div>
     </section>
 
@@ -75,9 +110,11 @@
     <section id="skills" class="reveal">
       <h2>Habilidades</h2>
       <ul>
-        <li>HTML5, CSS3, JavaScript</li>
-        <li>Frameworks (React, Node.js)</li>
-        <li>Bases de datos (MySQL, MongoDB)</li>
+        <li>Lenguajes: Java, Python, JavaScript (Node.js)</li>
+        <li>Frameworks: Spring Boot, Flask</li>
+        <li>Bases de datos: MySQL</li>
+        <li>Herramientas y entornos: Git, Docker, Visual Studio Code</li>
+        <li>Redes y automatización: VLANs, scripting en Python, MikroTik API</li>
       </ul>
     </section>
 
@@ -93,11 +130,11 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Cesar. Todos los derechos reservados.</p>
+      <p>&copy; 2025 César Fabián Salva. Todos los derechos reservados.</p>
     </footer>
   </div>
 
-  <!-- JS (ES Modules) -->
+  <!-- JS -->
   <script type="module" src="assets/js/init.js?v=1"></script>
 </body>
 </html>
