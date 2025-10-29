@@ -46,10 +46,34 @@
   transition: .3s;
   text-decoration: none;
   color: inherit;
+  position: relative; /* necesario para el icono */
 }
+
+/* efecto hover */
 .project:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(41,121,255,.4);
+}
+
+/* Ícono GitHub al hacer hover */
+.project::after {
+  content: "\f09b"; /* Font Awesome GitHub */
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  color: #2979ff;
+  font-size: 26px;
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  opacity: 0;
+  transform: translateY(-5px) scale(0.9);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.project:hover::after {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* Skills */
